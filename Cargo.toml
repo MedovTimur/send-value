@@ -1,20 +1,15 @@
-[workspace]
-
 [package]
-name = "send-value"
+name = "send_value"
 version = "0.1.0"
 edition = "2021"
 
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [dependencies]
-sails-rs = "0.3.0"
+gstd = { git = "https://github.com/gear-tech/gear" }
 
 [build-dependencies]
-sails-rs = { version = "0.3.0", features = ["wasm-builder"] }
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear"}
 
 [dev-dependencies]
-send-value = { path = ".", features = ["wasm-binary"] }
-send-value-client = { path = "client" }
-tokio = { version = "1.39", features = ["rt", "macros"] }
-
-[features]
-wasm-binary = []
+gtest = { git = "https://github.com/gear-tech/gear"}

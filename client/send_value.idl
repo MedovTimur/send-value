@@ -1,8 +1,0 @@
-constructor {
-  New : ();
-};
-
-service SendValue {
-  SendValue : (to: actor_id, value: u128) -> null;
-};
-
