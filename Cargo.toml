@@ -1,0 +1,20 @@
+[workspace]
+
+[package]
+name = "send-value"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sails-rs = "0.3.0"
+
+[build-dependencies]
+sails-rs = { version = "0.3.0", features = ["wasm-builder"] }
+
+[dev-dependencies]
+send-value = { path = ".", features = ["wasm-binary"] }
+send-value-client = { path = "client" }
+tokio = { version = "1.39", features = ["rt", "macros"] }
+
+[features]
+wasm-binary = []
