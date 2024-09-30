@@ -23,6 +23,16 @@ fn test() {
     system.transfer(id, program.id(), value/2, true);
     let old_balance = system.balance_of(id);
     println!("\n OLD BALANCE: {:?} \n", old_balance);
+
+
+
+    // let log = Log::builder().dest(id);
+    // let mailbox = system.get_mailbox(id);
+    // println!("MAILBOX {:?}", mailbox);
+
+
+
+
     let msg_id = program.send(USER,id);
     println!("\n HERE 1 \n");
     let res = system.run_next_block();
